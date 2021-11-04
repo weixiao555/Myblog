@@ -1,0 +1,5 @@
+spring:
+  thymeleaf:
+    mode: HTML
+  profiles:
+    active: dev # 指定运行的坏境

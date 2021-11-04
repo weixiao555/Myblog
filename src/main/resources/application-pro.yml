@@ -1,0 +1,21 @@
+spring:
+#  数据库的配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: none # 实体类确定之后可以改为none,这个是数据库字段和实体类的字段自动同步更新
+    show-sql: true # 默认为false,这样可以把sql语句输出在控制台和日志文件中
+
+# 日志配置
+logging:
+  level:
+    root: warn
+    com.lrm: info
+  file:
+    name: log/bolg-pro.log # 日志文件生成路径,默认会按照10M大小来切分,也可以自定义按照日期来切分
+server:
+  port: 8081
